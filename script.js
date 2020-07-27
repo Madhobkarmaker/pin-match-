@@ -1,7 +1,9 @@
+
 // random pin generate and display random pin
 
 function randomPinInput(min, max){
         document.getElementById("display-pin").value = Math.floor(Math.random() * (max - min + 1) + min);
+        notDisplay();
         
 }
 
@@ -37,6 +39,13 @@ document.getElementById("submit").addEventListener('click',function(){
         document.getElementById("screen").value = " " ;
          
     }
-    
  })
 
+ // not display the bottom message
+
+function notDisplay(){
+    document.getElementById("alertMessage1").style.display = 'none';
+    document.getElementById("alertMessage2").style.display = 'none';
+}
+
+notDisplay();
