@@ -28,6 +28,7 @@ function submitButton() {
     if (inputPin == generatePin) {
         document.getElementById("matchMessage").style.display = "block";
         document.getElementById("misMatchMessage").style.display = "none";
+        document.getElementById("try-action").innerText = "Done";
         document.getElementById("display-pinScreen").value = "" ;
         document.getElementById("input-pinScreen").value = "" ;
         
