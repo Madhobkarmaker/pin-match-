@@ -13,13 +13,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width" >
-                    <input class="form-control" id="display-pin" type="text" placeholder="Four digit pin number">
+                    <input class="form-control" id="display-pinScreen" type="text" placeholder="Generate 4-digit pin" style="text-align: center;">
                     <button class="generate-btn" onclick="randomPinInput(1000,9999)">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6" >
                 <div class="input-section half-width" >
-                    <input class="form-control" type="text" id="screen">
+                    <input class="form-control" type="text" id="input-pinScreen" placeholder="Enter Your Pin" style="text-align: center;">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
@@ -43,16 +43,16 @@
                                 <div class="button" id="clear-screen">C</div>
                             </div>
                             <div>
-                                <button type="submit" class="submit-btn" id="submit">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <button type="submit" class="submit-btn" id="submitBtn" onclick="submitButton()">Submit</button>
+                                <p class="action-left" id="try-action">3 try left</p>
                             </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="notify-section">
-            <p class="notify" id="alertMessage1">❌ Pin Didn't Match, Please try again</p>
-            <p class="notify" id="alertMessage2">✅ Pin Matched... Secret door is opening for you</p>
+            <p class="notify" id="misMatchMessage">❌ Pin Didn't Match, Please try again</p>
+            <p class="notify" id="matchMessage">✅ Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
 
